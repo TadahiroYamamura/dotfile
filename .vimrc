@@ -22,6 +22,9 @@ set hidden
 set hlsearch
 set incsearch
 
+let g:netrw_liststyle=3
+let g:netrw_banner=0
+
 set ballooneval
 autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
 autocmd FileType typescript nmap <buffer> ,t : <C-u>echo tsuquyomi#hint()<CR>
