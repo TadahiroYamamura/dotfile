@@ -60,7 +60,6 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'quramy/tsuquyomi'
 Plugin 'kana/vim-submode'
-Plugin 'tpope/vim-markdown'
 Plugin 'previm/previm'
 Plugin 'tyru/open-browser.vim'
 call vundle#end()
