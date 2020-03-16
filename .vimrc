@@ -79,8 +79,6 @@ let g:openbrowser_browser_commands = [ {'name': 'google-chrome-stable',  'args':
 let g:previm_open_cmd = '/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
 let g:previm_wsl_mode = 1
 
-let g:vim_markdown_initial_foldlevel=1
-
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
