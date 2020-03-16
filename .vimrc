@@ -60,6 +60,9 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'quramy/tsuquyomi'
 Plugin 'kana/vim-submode'
+Plugin 'tpope/vim-markdown'
+Plugin 'previm/previm'
+Plugin 'tyru/open-browser.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -71,6 +74,13 @@ set t_Co=256
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+let g:openbrowser_browser_commands = [ {'name': 'google-chrome-stable',  'args': ['{browser}', '{uri}']} ]
+
+let g:previm_open_cmd = '/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
+let g:previm_wsl_mode = 1
+
+let g:vim_markdown_initial_foldlevel=1
 
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 1
