@@ -89,6 +89,8 @@ let g:netrw_liststyle=3
 let g:netrw_banner=0
 let g:netrw_sizestyle='H'
 let g:netrw_timefmt='%Y/%m/%d(%a) %H:%M:%S'
+let g:netrw_fastbrowse=0
+autocmd FileType netrw setl bufhidden=wipe
 
 autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
 autocmd FileType typescript nmap <buffer> ,t : <C-u>echo tsuquyomi#hint()<CR>
