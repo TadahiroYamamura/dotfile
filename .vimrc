@@ -3,6 +3,7 @@ set fenc=utf-8
 set autoread
 set hidden
 set showcmd
+set fileformat=unix
 
 " backup
 set nobackup
@@ -28,7 +29,6 @@ nnoremap k gk
 " indent
 set smartindent
 set autoindent
-set list listchars=tab:\▸\-,eol:↲
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -41,9 +41,19 @@ set wrapscan
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+" clipboard
+set clipboard&
+set clipboard^=unnamedplus
+
 " buffer
 nnoremap <silent> <C-j> :bnext<CR>
 nnoremap <silent> <C-k> :bprev<CR>
+
+" register
+vnoremap x "_x
+vnoremap X "_X
+vnoremap s "_s
+vnoremap S "_S
 
 
 
@@ -62,6 +72,7 @@ Plugin 'quramy/tsuquyomi'
 Plugin 'kana/vim-submode'
 Plugin 'previm/previm'
 Plugin 'tyru/open-browser.vim'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -92,10 +103,16 @@ let g:netrw_timefmt='%Y/%m/%d(%a) %H:%M:%S'
 let g:netrw_fastbrowse=0
 autocmd FileType netrw setl bufhidden=wipe
 
+let g:tsuquyomi_disable_default_mappings = 1
 autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
 autocmd FileType typescript nmap <buffer> ,t : <C-u>echo tsuquyomi#hint()<CR>
+nmap <buffer> <Space><C-]> <Plug>(TsuquyomiReferences)
 
 call submode#enter_with('bufmove', 'n', '', '<C-w>>', '<C-w>>')
 call submode#enter_with('bufmove', 'n', '', '<C-w><', '<C-w><')
+call submode#enter_with('bufmove', 'n', '', '<C-w>-', '<C-w>-')
+call submode#enter_with('bufmove', 'n', '', '<C-w>+', '<C-w>+')
 call submode#map('bufmove', 'n', '', '>', '<C-w>>')
 call submode#map('bufmove', 'n', '', '<', '<C-w><')
+call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+call submode#map('bufmove', 'n', '', '+', '<C-w>+')
