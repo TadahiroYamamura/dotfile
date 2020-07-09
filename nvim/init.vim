@@ -64,7 +64,7 @@ endif
 let &runtimepath = s:dein_repo_dir . ',' . &runtimepath
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
-  call dein#add(s:dein_dir . '/repos/github.com/Shougo/dein.vim')
+  call dein#add(s:dein_repo_dir)
   call dein#load_toml(s:config_home . '/nvim/dein.toml',           {'lazy': 0})
   call dein#load_toml(s:config_home . '/nvim/language.toml',       {'lazy': 0})
   call dein#end()
