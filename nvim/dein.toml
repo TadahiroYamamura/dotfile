@@ -1,0 +1,61 @@
+[[plugins]]
+# カラースキーマ
+repo = 'tomasr/molokai'
+hook_add = '''
+  syntax on
+  colorscheme molokai
+  set t_Co=256
+'''
+
+[[plugins]]
+# .editorconfigを反映させる用
+repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+# vimにシンタックスチェックの機能を追加する
+repo = 'vim-syntastic/syntastic'
+hook_add = '''
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  let g:syntastic_always_populate_loc_list = 0
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+'''
+
+[[plugins]]
+# とりあえずバッファーのサイズを簡単に変えられるようにする
+# 他の使い方はまた今度考えよう。
+repo = 'kana/vim-submode'
+hook_add = '''
+  call submode#enter_with('bufmove', 'n', '', '<C-w>>', '<C-w>>')
+  call submode#enter_with('bufmove', 'n', '', '<C-w><', '<C-w><')
+  call submode#enter_with('bufmove', 'n', '', '<C-w>-', '<C-w>-')
+  call submode#enter_with('bufmove', 'n', '', '<C-w>+', '<C-w>+')
+  call submode#map('bufmove', 'n', '', '>', '<C-w>>')
+  call submode#map('bufmove', 'n', '', '<', '<C-w><')
+  call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+  call submode#map('bufmove', 'n', '', '+', '<C-w>+')
+'''
+
+[[plugins]]
+# Markdownをプレビュー
+repo = 'previm/previm'
+hook_add = '''
+  let g:previm_open_cmd = 'google-chrome-stable'
+'''
+
+[[plugins]]
+# 調べものをするのに便利
+repo = 'tyru/open-browser.vim'
+hook_add = '''
+  let g:openbrowser_browser_commands = [ {'name': 'google-chrome-stable',  'args': ['{browser}', '{uri}']} ]
+  let g:openbrowser_search_engines = {
+  \  'translateEN': 'https://translate.google.co.jp/?hl=ja#view=home&op=translate&sl=en&tl=ja&text={query}',
+  \  'translateJP': 'https://translate.google.co.jp/?hl=ja#view=home&op=translate&sl=ja&tl=en&text={query}'
+  \}
+  :command -nargs=1 TranslateJP OpenBrowserSearch -translateJP <args>
+  :command -nargs=1 TranslateEN OpenBrowserSearch -translateEN <args>
+'''
