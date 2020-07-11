@@ -1,71 +1,19 @@
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_source = '''
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#enable_ignore_case = 1
-  let g:deoplete#enable_smart_case = 1
-  call deoplete#custom#option({
-    \ 'auto_complete': v:true,
-    \ 'min_pattern_length': 2,
-    \ 'auto_complete_delay': 0,
-    \ 'auto_refresh_delay': 20,
-    \ 'refresh_always': v:true,
-    \ 'smart_case': v:true,
-    \ 'camel_case': v:true,
-    \ })
-  call deoplete#custom#option('sources', {
-    \ 'typescript': ['lsp', 'dictionary', 'file'],
-    \ 'vim': ['vim', 'buffer', 'dictionary', 'file'],
-    \})
-'''
-
-[[plugins]]
-# deoplete-vim-lspの依存パッケージ
-repo = 'prabirshrestha/async.vim'
-
-[[plugins]]
-# deoplateのLSP統合
-repo = 'lighttiger2505/deoplete-vim-lsp'
-hook_source = '''
-  function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
-    setlocal signcolumn=yes
-    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> gr <plug>(lsp-references)
-    nmap <buffer> gi <plug>(lsp-implementation)
-    nmap <buffer> gt <plug>(lsp-type-definition)
-    nmap <buffer> <leader>rn <plug>(lsp-rename)
-    nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
-    nmap <buffer> K <plug>(lsp-hover)
-  endfunction
-  augroup lsp_install
-    au!
-    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-  augroup END
-'''
-
-[[plugins]]
-# LSPクライアント実装
-repo = 'prabirshrestha/vim-lsp'
-hook_add = '''
-if executable('typescript-language-server')
-  au User lsp_setup call lsp#register_server({
-    \ 'name': 'typescript support using typescript-language-server',
-    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-    \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-    \ 'whitelist': ['typescript', 'typescript.tsx', 'typescriptreact'],
-    \ })
-endif
-'''
-
-[[plugins]]
-# Language Serverの設定を簡単にしてくれるプラグイン
-repo = 'mattn/vim-lsp-settings'
+# 補完プラグイン。
+repo = 'neoclide/coc.nvim'
 merged = '0'
+rev = 'release'
+hook_add = '''
+  set statusline^=%{coc#status()}
+  set updatetime=300
+  nmap <silent> [g <Plug>(coc-diagnostic-prev)
+  nmap <silent> ]g <Plug>(coc-diagnostic-next)
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
+  nmap <silent> <F2> <Plug>(coc-rename)
+'''
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
-
