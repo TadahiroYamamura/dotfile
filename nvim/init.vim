@@ -4,6 +4,7 @@ set autoread
 set hidden
 set showcmd
 set fileformat=unix
+set modifiable
 
 " backup
 set nobackup
@@ -54,8 +55,15 @@ vnoremap X "_X
 vnoremap s "_s
 vnoremap S "_S
 
+" config related directories
 let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
 let s:config_home = empty($XDG_CONFIG_HOME) ? expand('~/.config') : $XDG_CONFIG_HOME
+
+" python
+let s:python3_exe = system('which python')
+let g:python3_host_prog = s:python3_exe
+
+" dein
 let s:dein_dir = s:cache_home . '/dein'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 if !isdirectory(s:dein_repo_dir)
@@ -72,9 +80,15 @@ if dein#load_state(s:dein_dir)
 endif
 filetype plugin indent on
 
+"netrw
 let g:netrw_liststyle=3
 let g:netrw_banner=0
 let g:netrw_sizestyle='H'
 let g:netrw_timefmt='%Y/%m/%d(%a) %H:%M:%S'
 let g:netrw_fastbrowse=0
-autocmd FileType netrw setl bufhidden=wipe
+let netrw_winsize = 18
+augroup netrw_init
+  autocmd!
+  autocmd VimEnter * :Vexplore
+  autocmd FileType netrw setl bufhidden=wipe
+augroup END
