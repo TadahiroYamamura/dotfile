@@ -56,6 +56,6 @@ hook_add = '''
   \  'translateEN': 'https://translate.google.co.jp/?hl=ja#view=home&op=translate&sl=en&tl=ja&text={query}',
   \  'translateJP': 'https://translate.google.co.jp/?hl=ja#view=home&op=translate&sl=ja&tl=en&text={query}'
   \}
-  :command -nargs=1 TranslateJP OpenBrowserSearch -translateJP <args>
-  :command -nargs=1 TranslateEN OpenBrowserSearch -translateEN <args>
+  command! -nargs=1 TranslateJP OpenBrowserSearch -translateJP <args>
+  command! -nargs=1 TranslateEN OpenBrowserSearch -translateEN <args>
 '''
