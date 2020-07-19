@@ -13,6 +13,12 @@ hook_add = '''
   nmap <silent> gi <Plug>(coc-implementation)
   nmap <silent> gr <Plug>(coc-references)
   nmap <silent> <F2> <Plug>(coc-rename)
+
+  augroup XMLSettings
+    autocmd!
+    autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+    autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+  augroup END
 '''
 
 [[plugins]]
