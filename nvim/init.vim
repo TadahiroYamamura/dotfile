@@ -88,10 +88,10 @@ let g:netrw_liststyle=3
 let g:netrw_banner=0
 let g:netrw_sizestyle='H'
 let g:netrw_timefmt='%Y/%m/%d(%a) %H:%M:%S'
-let g:netrw_fastbrowse=0
-let netrw_winsize = 18
+let g:netrw_fastbrowse=2
+let g:netrw_browse_split=0
 augroup netrw_init
   autocmd!
-  autocmd VimEnter * :Vexplore
   autocmd FileType netrw setl bufhidden=wipe
 augroup END
+command! -nargs=? Ex Lexplore 18 <args>
