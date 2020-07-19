@@ -55,6 +55,9 @@ vnoremap X "_X
 vnoremap s "_s
 vnoremap S "_S
 
+" terminal
+tnoremap <Esc><Esc> <C-\><C-n>
+
 " config related directories
 let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
 let s:config_home = empty($XDG_CONFIG_HOME) ? expand('~/.config') : $XDG_CONFIG_HOME
