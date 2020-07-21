@@ -1,10 +1,13 @@
 [[plugins]]
 # カラースキーマ
 repo = 'tomasr/molokai'
+
+[[plugins]]
+# カラースキーマ
+repo = 'morhetz/gruvbox'
 hook_add = '''
   syntax on
-  colorscheme molokai
-  set t_Co=256
+  colorscheme gruvbox
 '''
 
 [[plugins]]
