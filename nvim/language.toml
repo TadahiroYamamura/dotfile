@@ -19,6 +19,7 @@ hook_add = '''
     autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
     autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
   augroup END
+  command! -nargs=? Ex CocCommand explorer --preset side --toggle<args>
 '''
 
 [[plugins]]

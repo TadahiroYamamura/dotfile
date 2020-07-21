@@ -1,0 +1,23 @@
+{
+  "explorer.presets": {
+    "side": {
+      "position": "left",
+      "width": 40,
+      "quit-on-open": true,
+      "sources": [
+        {
+          "name": "bookmark",
+          "expand": false
+        },
+        {
+          "name": "buffer",
+          "expand": true
+        },
+        {
+          "name": "file",
+          "expand": true
+        }
+      ]
+    }
+  }
+}

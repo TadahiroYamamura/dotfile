@@ -94,4 +94,3 @@ augroup netrw_init
   autocmd!
   autocmd FileType netrw setl bufhidden=wipe
 augroup END
-command! -nargs=? Ex Lexplore 18 <args>
