@@ -83,7 +83,7 @@ if dein#load_state(s:dein_dir)
 endif
 filetype plugin indent on
 
-"netrw
+" netrw
 let g:netrw_liststyle=3
 let g:netrw_banner=0
 let g:netrw_sizestyle='H'
@@ -94,3 +94,7 @@ augroup netrw_init
   autocmd!
   autocmd FileType netrw setl bufhidden=wipe
 augroup END
+
+" task runner
+command! -nargs=+ Makers !makers <args>
+command! -nargs=+ Yarn !yarn <args>
