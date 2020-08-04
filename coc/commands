@@ -1,0 +1,10 @@
+explorer
+java.projectConfiguration.update
+java.clean.workspace
+java.open.serverLog
+java.import.gradle.enabled
+java.action.organizeImports
+java.updateLanguageServer
+java.workspace.compile
+java.enabled
+java.jdt.ls.home
