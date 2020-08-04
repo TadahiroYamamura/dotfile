@@ -70,3 +70,7 @@ hook_add = '''
 # 非同期実行用プラグイン。別プラグインの依存によく出てくるので
 repo = 'Shougo/vimproc.vim'
 build = 'make'
+
+[[plugins]]
+# デバッグ連携
+repo = 'puremourning/vimspector'
