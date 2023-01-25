@@ -51,7 +51,4 @@ vim.cmd("colorscheme molokai")
 require("plugins")
 require("keymappings")
 require("netrw")
-
--- 後でファイルタイプごとに設定する
-vim.opt.expandtab = false
-vim.opt.tabstop = 4
+require("autocmd")
