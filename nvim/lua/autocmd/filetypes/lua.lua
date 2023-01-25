@@ -10,7 +10,6 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt.smartindent = true
 
 		-- インデントの可視化
-		vim.opt.list = false
 		require("indent_blankline").setup({
 			char = "",
 			char_highlight_list = {"IndentBlanklineIndent01", "IndentBlanklineIndent02" },
