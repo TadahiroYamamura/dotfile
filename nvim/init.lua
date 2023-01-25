@@ -33,7 +33,6 @@ vim.opt.list = false
 vim.opt.listchars = { tab = "^ ", space = "_" }
 
 -- バッファ内の検索
-vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 
 -- swapファイルを作らない
