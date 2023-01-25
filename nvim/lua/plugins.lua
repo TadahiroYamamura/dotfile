@@ -25,4 +25,7 @@ return require("packer").startup(function(use)
 
 	-- インデントの可視化
 	use("lukas-reineke/indent-blankline.nvim", { opt = true })
+
+	-- カラーピッカー
+	use("uga-rosa/ccc.nvim", { opt = true })
 end)
