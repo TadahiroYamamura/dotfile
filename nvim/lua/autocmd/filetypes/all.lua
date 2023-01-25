@@ -1,4 +1,6 @@
+local group = vim.api.nvim_create_augroup("FileTypeSpecificSettingsAll", {})
 vim.api.nvim_create_autocmd("FileType", {
+	group = group,
 	pattern = "*",
 	callback = function()
 		vim.opt.expandtab = false

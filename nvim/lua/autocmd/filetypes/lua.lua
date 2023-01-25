@@ -1,4 +1,6 @@
+local group = vim.api.nvim_create_augroup("FileTypeSpecificSettingsLua", {})
 vim.api.nvim_create_autocmd("FileType", {
+	group = group,
 	pattern = "lua",
 	callback = function()
 		vim.opt.expandtab = false
