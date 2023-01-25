@@ -19,4 +19,7 @@ return require("packer").startup(function(use)
             }))
         end,
     })
+
+    -- 分割されたウィンドウの移動を楽にしてくれる
+    use('tkmpypy/chowcho.nvim')
 end)
