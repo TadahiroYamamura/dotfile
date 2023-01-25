@@ -14,9 +14,9 @@ vim.api.nvim_set_keymap("n", "<C-k>", ":bprev<CR>", { noremap = true, silent = t
 -- xやsで削除したデータではレジスタを変更しない
 -- レジスタの変更はdやcで行う
 for _, key in pairs({ "x", "X", "s", "S" }) do
-    for _, mode in pairs({ "n", "v" }) do
-        vim.api.nvim_set_keymap(mode, key, "\"_"..key, { noremap = true, silent = false })
-    end
+	for _, mode in pairs({ "n", "v" }) do
+		vim.api.nvim_set_keymap(mode, key, "\"_"..key, { noremap = true, silent = false })
+	end
 end
 
 -- ヤンクしてきた結果を連続してペーストできるようにする
