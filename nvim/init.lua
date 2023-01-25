@@ -17,7 +17,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- カーソルのある場所を強調表示させる
-vim.opt.cursorcolumn = false
+vim.opt.cursorcolumn = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = { "number", "screenline" }
 
