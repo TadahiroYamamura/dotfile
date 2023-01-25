@@ -21,3 +21,7 @@ end
 
 -- ヤンクしてきた結果を連続してペーストできるようにする
 vim.api.nvim_set_keymap("v", "p", "\"_xP", { noremap = true, silent = true })
+
+-- 分割したバッファのリサイズ
+vim.api.nvim_set_keymap("n", "<C-w>s", ":resize ", { noremap = true })
+vim.api.nvim_set_keymap("n", "<C-w>v", ":vertical resize ", { noremap = true })
