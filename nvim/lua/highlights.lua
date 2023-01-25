@@ -6,3 +6,15 @@ vim.api.nvim_set_hl(0, "IndentBlanklineIndent02", {
 	fg = "NONE",
 	bg = "#282828"
 })
+
+
+for _, name in pairs({ "LspReferenceText", "LspReferenceRead", "LspReferenceWrite" }) do
+	vim.api.nvim_set_hl(0, name, {
+		cterm = { underline = true },
+		ctermfg = 1,
+		ctermbg = 8,
+		underline = true,
+		fg = "#333333",
+		bg = "#cccc00",
+	})
+end

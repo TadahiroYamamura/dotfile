@@ -48,7 +48,11 @@ vim.opt.ruler = true
 vim.opt.termguicolors = true
 vim.cmd("colorscheme molokai")
 
+-- 「カーソルが動いていない」と判断するまでの時間[ms]
+vim.opt.updatetime = 500
+
 require("plugins")
+require("lsp")
 require("keymappings")
 require("netrw")
 require("autocmd")

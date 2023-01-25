@@ -28,4 +28,11 @@ return require("packer").startup(function(use)
 
 	-- カラーピッカー
 	use("uga-rosa/ccc.nvim", { opt = true })
+
+	-- LSPの設定集
+	use("neovim/nvim-lspconfig")
+
+	-- LSPサーバーの管理(nvim-lspconfigと連携させる)
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
 end)
