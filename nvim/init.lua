@@ -45,9 +45,11 @@ vim.opt.wrap = false
 vim.opt.ruler = true
 
 -- カラースキーマの指定
+vim.opt.termguicolors = true
 vim.cmd("colorscheme molokai")
 
 require("plugins")
 require("keymappings")
 require("netrw")
 require("autocmd")
+require("highlights")

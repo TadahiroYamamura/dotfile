@@ -22,4 +22,7 @@ return require("packer").startup(function(use)
 
 	-- 分割されたウィンドウの移動を楽にしてくれる
 	use('tkmpypy/chowcho.nvim')
+
+	-- インデントの可視化
+	use("lukas-reineke/indent-blankline.nvim", { opt = true })
 end)
