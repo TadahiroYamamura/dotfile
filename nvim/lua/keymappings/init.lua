@@ -11,6 +11,12 @@ vim.api.nvim_set_keymap("n", "k", "gk", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-j>", ":bnext<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-k>", ":bprev<CR>", { noremap = true, silent = true })
 
+-- Quickfix
+vim.api.nvim_set_keymap("n", "<C-q>", ":cclose<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-h>", ":cnext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-l>", ":cprev<CR>", { noremap = true, silent = true })
+
+
 -- xやsで削除したデータではレジスタを変更しない
 -- レジスタの変更はdやcで行う
 for _, key in pairs({ "x", "X", "s", "S" }) do
