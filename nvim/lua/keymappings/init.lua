@@ -44,7 +44,7 @@ vim.keymap.set("n", "<C-e>", function()
 end)
 
 -- ターミナル
-vim.api.nvim_set_keymap("n", "<C-q>", ":ToggleTerm direction=float<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-Q>", ":ToggleTerm direction=float<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
 -- LSPの設定
