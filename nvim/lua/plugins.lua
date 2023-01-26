@@ -35,4 +35,8 @@ return require("packer").startup(function(use)
 	-- LSPサーバーの管理(nvim-lspconfigと連携させる)
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
+
+	use({"akinsho/toggleterm.nvim", tag = '*', config = function()
+		require("toggleterm").setup()
+	end})
 end)
