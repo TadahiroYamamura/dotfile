@@ -29,6 +29,8 @@ end
 vim.api.nvim_set_keymap("n", "<C-w>s", ":resize ", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-w>v", ":vertical resize ", { noremap = true })
 
--- chowcho.nvimの設定
+-- LSPの設定
 require("keymappings.lsp")
+
+-- chowcho.nvimの設定
 require("keymappings.chowcho")
