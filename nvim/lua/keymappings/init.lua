@@ -29,6 +29,20 @@ end
 vim.api.nvim_set_keymap("n", "<C-w>s", ":resize ", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-w>v", ":vertical resize ", { noremap = true })
 
+-- NetRWを開いたり閉じたりする
+vim.g.netrw_buffer_id = 0
+vim.keymap.set("n", "<C-e>", function()
+	if vim.g.netrw_buffer_id == 0 then
+		vim.cmd("vsplit")
+		vim.cmd("Ex")
+		vim.cmd("vertical resize 30")
+		vim.g.netrw_buffer_id = vim.api.nvim_get_current_buf()
+	else
+		vim.cmd("bwipeout " .. vim.g.netrw_buffer_id)
+		vim.g.netrw_buffer_id = 0
+	end
+end)
+
 -- LSPの設定
 require("keymappings.lsp")
 
