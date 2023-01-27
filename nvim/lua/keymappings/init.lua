@@ -13,8 +13,8 @@ vim.api.nvim_set_keymap("n", "<C-k>", ":bprev<CR>", { noremap = true, silent = t
 
 -- Quickfix
 vim.api.nvim_set_keymap("n", "<C-q>", ":cclose<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-h>", ":cnext<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-l>", ":cprev<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-h>", ":cprev<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-l>", ":cnext<CR>", { noremap = true, silent = true })
 
 
 -- xやsで削除したデータではレジスタを変更しない
@@ -44,7 +44,7 @@ vim.keymap.set("n", "<C-e>", function()
 end)
 
 -- ターミナル
-vim.api.nvim_set_keymap("n", "<C-Q>", ":ToggleTerm direction=float<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-\\>", ":ToggleTerm direction=float<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
 -- LSPの設定
