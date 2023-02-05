@@ -52,3 +52,6 @@ require("keymappings.lsp")
 
 -- chowcho.nvimの設定
 require("keymappings.chowcho")
+
+-- Gitの設定
+require("keymappings.git")
