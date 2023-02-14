@@ -3,6 +3,9 @@ vim.g.mapleader = " "
 -- Esc2回でハイライトを消す
 vim.api.nvim_set_keymap("n", "<Esc><Esc>", ":nohlsearch<CR>", { noremap = true, silent = true })
 
+-- バッファの切り替え
+vim.api.nvim_set_keymap("n", "<leader><leader>", "<C-^>", { noremap = true, silent = true })
+
 -- カーソル移動
 vim.api.nvim_set_keymap("n", "j", "gj", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "k", "gk", { noremap = true, silent = true })
