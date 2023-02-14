@@ -51,6 +51,9 @@ vim.cmd("colorscheme molokai")
 -- 「カーソルが動いていない」と判断するまでの時間[ms]
 vim.opt.updatetime = 500
 
+-- :findの検索対象に$PWD配下を追加する
+vim.opt.path:append(vim.fn.getcwd().."/**")
+
 require("plugins")
 require("lsp")
 require("keymappings")
