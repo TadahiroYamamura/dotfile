@@ -36,6 +36,9 @@ return require("packer").startup(function(use)
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
 
+	-- カラースキーマ
+	use("tomasr/molokai")
+
 	use({"akinsho/toggleterm.nvim", tag = '*', config = function()
 		require("toggleterm").setup()
 	end})
