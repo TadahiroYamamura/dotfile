@@ -1,0 +1,5 @@
+-- カラースキーマmolokai
+
+return {
+	'tomasr/molokai',
+}
