@@ -21,7 +21,7 @@ vim.opt.cursorcolumn = true
 vim.opt.cursorlineopt = { 'number', 'screenline' }
 
 -- 特殊文字の表示
-vim.opt.listchars = { tab = '^ ', space = '_' }
+vim.opt.listchars = { tab = '^ ', space = '･' }
 
 -- swapファイルを作らない
 vim.opt.swapfile = false
