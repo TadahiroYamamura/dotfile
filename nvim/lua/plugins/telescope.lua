@@ -1,8 +1,12 @@
--- REST.nvimで.envを選択する際、このプラグインがあると
--- パスの検索が容易になる
+-- ファジーファインダー
 return {
 	'nvim-telescope/telescope.nvim',
 	dependencies = {
-		{'nvim-lua/plenary.nvim'}
+		{'nvim-lua/plenary.nvim'},
+		{'BurntSushi/ripgrep'},
 	},
+	keys = {
+		{ '<leader>ff', require('telescope.builtin').find_files, mode='n' },
+		{ '<leader>fg', require('telescope.builtin').live_grep, mode='n' },
+	}
 }
