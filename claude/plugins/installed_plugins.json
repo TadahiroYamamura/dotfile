@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "plugins": {
+    "frontend-design@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\chacha\\.claude\\plugins\\cache\\claude-plugins-official\\frontend-design\\unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-06T16:38:44.000Z",
+        "lastUpdated": "2026-05-06T16:38:44.000Z"
+      }
+    ],
+    "code-review@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\chacha\\.claude\\plugins\\cache\\claude-plugins-official\\code-review\\unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-06T16:40:48.255Z",
+        "lastUpdated": "2026-05-06T16:40:48.255Z"
+      }
+    ],
+    "context7@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\chacha\\.claude\\plugins\\cache\\claude-plugins-official\\context7\\unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-06T16:43:15.254Z",
+        "lastUpdated": "2026-05-06T16:43:15.254Z"
+      }
+    ],
+    "github@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\chacha\\.claude\\plugins\\cache\\claude-plugins-official\\github\\unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-06T16:45:30.636Z",
+        "lastUpdated": "2026-05-06T16:45:30.636Z"
+      }
+    ],
+    "skill-creator@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\chacha\\.claude\\plugins\\cache\\claude-plugins-official\\skill-creator\\unknown",
+        "version": "unknown",
+        "installedAt": "2026-05-06T16:45:47.359Z",
+        "lastUpdated": "2026-05-06T16:45:47.359Z"
+      }
+    ],
+    "claude-md-management@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\chacha\\.claude\\plugins\\cache\\claude-plugins-official\\claude-md-management\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-05-06T16:48:15.950Z",
+        "lastUpdated": "2026-05-06T16:48:15.950Z"
+      }
+    ]
+  }
+}
