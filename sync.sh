@@ -19,6 +19,7 @@ function claude () {
 	sync $HOME/.claude/commands/ ${0%/*}/claude/commands/
 	sync $HOME/.claude/plugins/ ${0%/*}/claude/plugins/
 	sync $HOME/.claude/skills/ ${0%/*}/claude/skills/
+	sync $HOME/.claude/scripts/ ${0%/*}/claude/scripts/
 
 	echo "settings.jsonに機密情報が含まれていないかチェックしてください"
 	cat ${0%/*}/claude/settings.json

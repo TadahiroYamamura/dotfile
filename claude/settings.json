@@ -9,5 +9,9 @@
     "claude-md-management@claude-plugins-official": true
   },
   "autoUpdatesChannel": "latest",
-  "theme": "light-ansi"
+  "theme": "light-ansi",
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/scripts/statusline.sh"
+  }
 }
