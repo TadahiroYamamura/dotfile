@@ -17,6 +17,7 @@ function claude () {
 	sync $HOME/.claude/CLAUDE.md ${0%/*}/claude/CLAUDE.md
 	sync $HOME/.claude/settings.json ${0%/*}/claude/settings.json
 	sync $HOME/.claude/commands/ ${0%/*}/claude/commands/
+	sync $HOME/.claude/rules/ ${0%/*}/claude/rules/
 	sync $HOME/.claude/plugins/ ${0%/*}/claude/plugins/
 	sync $HOME/.claude/skills/ ${0%/*}/claude/skills/
 	sync $HOME/.claude/scripts/ ${0%/*}/claude/scripts/
