@@ -13,6 +13,10 @@ function nvim () {
 	sync $HOME/.config/nvim/ ${0%/*}/nvim/
 }
 
+function tmux () {
+	sync $HOME/.tmux.conf ${0%/*}/tmux/.tmux.conf
+}
+
 function claude () {
 	sync $HOME/.claude/CLAUDE.md ${0%/*}/claude/CLAUDE.md
 	sync $HOME/.claude/settings.json ${0%/*}/claude/settings.json
